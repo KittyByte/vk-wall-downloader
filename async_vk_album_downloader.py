@@ -9,8 +9,8 @@ import time
 import os
 
 
-VK_TOKEN = ''
-VK_USER_ID = 123123123  # id человека у кого берете фото
+VK_TOKEN = ''  # сюда помещаем полученный токен
+VK_USER_ID = 123123123  # здесь пишем id человека у которого берете фото
 counter = 0  # просто счетчик
 
 if not os.path.exists('images'):

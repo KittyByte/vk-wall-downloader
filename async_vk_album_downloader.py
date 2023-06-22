@@ -7,14 +7,17 @@ import json
 import requests
 import time
 import os
+from pathlib import Path
 
 
 VK_TOKEN = ''  # сюда помещаем полученный токен
 VK_USER_ID = 123123123  # здесь пишем id человека у которого берете фото
 counter = 0  # просто счетчик
 
+path_of_execute = Path(__file__).parent  # путь к папке с этим скриптом
+
 if not os.path.exists('images'):
-    os.mkdir('images')
+    os.mkdir(f'{path_of_execute}/images')
 
 
 def get_photo_data(offset=1, count=200) -> json.loads:
